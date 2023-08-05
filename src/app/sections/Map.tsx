@@ -17,8 +17,8 @@ const Map = () => {
         world
       </div>
       <motion.img
-        src="/map.svg"
-        alt=""
+        src="/map.webp"
+        alt="world map "
         variants={fadeIn("up", "spring", 0, 0.2)}
         initial="hidden"
         whileInView={"show"}
