@@ -1,6 +1,6 @@
-import "../styles/globals.css";
+import "./styles/globals.css";
 import type { Metadata } from "next";
-import Nav from "../components/Nav";
+import Nav from "./components/Nav";
 
 export const metadata: Metadata = {
   title: "Metaverse Modren",
