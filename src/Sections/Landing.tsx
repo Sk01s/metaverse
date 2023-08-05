@@ -2,7 +2,7 @@
 import React, { MutableRefObject, useRef, useEffect, useState } from "react";
 import Aside from "../components/Aside";
 import { motion } from "framer-motion";
-import { slideIn, textVariant } from "@/utils/motions";
+import { slideIn, textVariant } from "../utils/motions";
 const Landing = () => {
   const hero: MutableRefObject<HTMLDivElement | null> = useRef(null);
   useEffect(() => {

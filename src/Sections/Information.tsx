@@ -1,7 +1,7 @@
 "use client";
-import IconFram from "@/components/IconFram";
-import Title from "@/components/Title";
-import { planetVariants, slideIn } from "@/utils/motions";
+import IconFram from "../components/IconFram";
+import Title from "../components/Title";
+import { planetVariants, slideIn } from "../utils/motions";
 import { motion } from "framer-motion";
 import React from "react";
 

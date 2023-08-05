@@ -1,6 +1,6 @@
 "use client";
-import Title from "@/components/Title";
-import { fadeIn, slideIn } from "@/utils/motions";
+import Title from "../components/Title";
+import { fadeIn, slideIn } from "../utils/motions";
 import { motion } from "framer-motion";
 import React from "react";
 

@@ -1,7 +1,6 @@
 "use client";
-import Title from "@/components/Title";
+import Title from "../components/Title";
 import WorldArticle from "../components/WorldArticle";
-import { motion } from "framer-motion";
 import React, { useState } from "react";
 
 const World = () => {

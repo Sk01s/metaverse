@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { slideIn } from "@/utils/motions";
+import { slideIn } from "../utils/motions";
 const Creater = () => {
   return (
     <section className="px-10 flex gap-8 lg:flex-row flex-col">

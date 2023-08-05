@@ -1,8 +1,8 @@
 "use client";
-import Title from "@/components/Title";
+import Title from "../components/Title";
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/motions";
+import { fadeIn } from "../utils/motions";
 
 const Map = () => {
   return (

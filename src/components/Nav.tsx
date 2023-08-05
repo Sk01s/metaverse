@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { navVariants } from "../utils/motions";
-import styles from "@/styles";
+import styles from "../styles";
 const Nav = () => {
   return (
     <motion.nav

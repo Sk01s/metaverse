@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { textVariant } from "@/utils/motions";
+import { textVariant } from "../utils/motions";
 import { motion } from "framer-motion";
-import Title from "@/components/Title";
+import Title from "../components/Title";
 const Description = () => {
   return (
     <article className="relative mb-[10rem]">
