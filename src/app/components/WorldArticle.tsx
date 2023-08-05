@@ -23,7 +23,7 @@ const WorldArticle: FC<props> = ({ index, state, title }) => {
     <motion.div
       variants={{
         hidden: {
-          x: -50,
+          x: "100%",
         },
         show: {
           x: 0,
@@ -33,7 +33,7 @@ const WorldArticle: FC<props> = ({ index, state, title }) => {
           },
         },
       }}
-      initial="hidden"
+      initial={isSmall ? "show" : "hidden"}
       whileInView="show"
       onClick={() => {
         setIsOpen((isOpen) => !isOpen);
@@ -50,6 +50,11 @@ const WorldArticle: FC<props> = ({ index, state, title }) => {
         className="h-full w-full object-cover"
         layout="fill"
         loading="lazy"
+      />
+      <div
+        className={`absolute w-full lg:h-48 md:h-48  h-44 ${
+          isOpen ? "opacity-1" : "opacity-0"
+        } bg-gradient-to-br from-[#00000028] to-[#000000ff] bottom-0 rounded-lg transition-opacity duration-200`}
       />
       {isOpen && (
         <motion.div

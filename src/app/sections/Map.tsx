@@ -7,18 +7,23 @@ import Image from "next/image";
 
 const Map = () => {
   return (
-    <section className="relative px-14 mb-24">
+    <section className="relative px-14 mb-24" id="map">
       <Title
         isAnimated={false}
         text="People on the World"
         className="mx-auto"
       />
-      <div className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-white text-center tracking-wider mb-5 mx-auto  ">
+      <motion.div
+        variants={fadeIn("up", "spring", 0.3, 0.5)}
+        initial="hidden"
+        whileInView={"show"}
+        className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-white text-center tracking-wider mb-5 mx-auto  "
+      >
         Track friends around you and invite them to play together in the same
         world
-      </div>
+      </motion.div>
       <motion.div
-        variants={fadeIn("up", "spring", 0, 0.2)}
+        variants={fadeIn("up", "spring", 0.5, 0.6)}
         initial="hidden"
         whileInView={"show"}
       >

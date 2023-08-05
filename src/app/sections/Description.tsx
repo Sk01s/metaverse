@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Title from "../components/Title";
 const Description = () => {
   return (
-    <article className="relative mb-[10rem]">
+    <section className="relative mb-[10rem]" id="description">
       <Title className="mx-auto" isAnimated={true} text="About Metaverus" />
       <motion.p
         variants={textVariant(0.2)}
@@ -52,7 +52,7 @@ const Description = () => {
       </motion.svg>
       <div className=" absolute gradient-1 w-[15%] h-[120%] top-[-40%] right-0 z-[-1] blur-[6rem]" />
       <div className=" absolute  h-[30%] w-[30%] z-[-1] top-[50%] left-[10%] rounded-[30%] lg:rotate-[70deg] rotate-[65deg]  bg-secondary-purple lg:blur-[9rem] blur-[6rem]" />
-    </article>
+    </section>
   );
 };
 

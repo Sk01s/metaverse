@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="relative mb-12">
+    <section className="relative mb-12" id="about">
       <Title text="Insight" isAnimated={true} className="mx-auto" />
       <div className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-white text-center tracking-wider lg:mb-32 md:mb-32 mb-20">
         Insight about metaverse

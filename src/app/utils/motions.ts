@@ -14,8 +14,8 @@ export const navVariants: Variants = {
     y: 0,
     transition: {
       type: "spring",
-      stiffness: 80,
-      delay: 0.7,
+      stiffness: 100,
+      delay: 0.3,
     },
   },
 };
@@ -114,7 +114,7 @@ export const fadeIn = (
 
 export const planetVariants = (direction: string) => ({
   hidden: {
-    x: direction === "left" ? "-100%" : "100%",
+    x: direction === "left" ? "-80%" : "80%",
     rotate: 120,
   },
   show: {

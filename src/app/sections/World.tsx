@@ -20,7 +20,7 @@ const World = () => {
   ];
 
   return (
-    <section className="relative px-4">
+    <section className="relative px-4" id="world">
       <Title className="mx-auto" isAnimated={false} text="The World" />
       <div className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl text-white text-center tracking-wider mb-12">
         Choose the world you want to explore

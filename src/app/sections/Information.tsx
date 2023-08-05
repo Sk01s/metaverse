@@ -9,7 +9,7 @@ type Props = {};
 
 export default function Information({}: Props) {
   return (
-    <div className="relative ">
+    <div className="relative" id="information">
       <section className="my-48 flex flex-col lg:flex-row md:flex-row ">
         <motion.img
           src="/planet-1.svg"
@@ -17,7 +17,7 @@ export default function Information({}: Props) {
           variants={planetVariants("left")}
           initial="hidden"
           whileInView="show"
-          className="lg:w-[45%] md:w-[50%] scale-[1.1]"
+          className="lg:w-[45%] md:w-[50%] w-full scale-[1.1] min-h-[12rem]"
           loading="lazy"
         />
 
