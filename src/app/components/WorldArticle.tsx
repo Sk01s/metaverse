@@ -12,11 +12,16 @@ const WorldArticle: FC<props> = ({ index, state, title }) => {
   const [isOpen, setIsOpen] = useState(state);
   const [isSmall, setIsSmall] = useState<boolean>(false);
   useEffect(() => {
-    if (window.innerWidth < 768) {
-      setIsSmall(true);
-    } else {
-      setIsSmall(false);
+    function Size() {
+      if (window.innerWidth < 768) {
+        setIsSmall(true);
+      } else {
+        setIsSmall(false);
+      }
     }
+    window.onreset = Size;
+
+    Size();
   }, []);
   return (
     <motion.div
