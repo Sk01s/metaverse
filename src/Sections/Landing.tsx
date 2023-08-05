@@ -23,7 +23,7 @@ const Landing = () => {
           variants={textVariant(0.5)}
           initial="hidden"
           whileInView="active"
-          className={`font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[40px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white text-center `}
+          className={`font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[36px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white text-center `}
         >
           METAVERSE
         </motion.h1>
@@ -32,7 +32,7 @@ const Landing = () => {
             variants={textVariant(0.3)}
             initial="hidden"
             whileInView="active"
-            className={`font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[40px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white text-center `}
+            className={`font-bold lg:text-[144px] md:text-[100px] sm:text-[60px] text-[36px] lg:leading-[158.4px] md:leading-[114.4px] sm:leading-[74.4px] leading-[64.4px] uppercase text-white text-center `}
           >
             MA
           </motion.h1>
@@ -71,15 +71,30 @@ const Landing = () => {
         <motion.img
           alt="universe picture"
           src="/universe.webp"
+          loading="eager"
           className=" absolute w-[90%] h-[200%] z-[-1] object-cover top-[85%] right-0 rounded-tl-[6rem] rounded-bl-2xl"
-          variants={slideIn("right", "keyframes", 0.1, 0.2)}
+          variants={{
+            hidden: {
+              x: "100%",
+            },
+            show: {
+              x: 0,
+
+              transition: {
+                type: "spring",
+                delay: 0.2,
+                duration: 0.1,
+              },
+            },
+          }}
           initial="hidden"
           whileInView="show"
         />
         <motion.img
+          variants={slideIn("right", "spring", 0, 0.2)}
           src="/mouse-scroll.png"
           alt="Explore and enter the metaverse"
-          className={`absolute right-[0] top-[280%] object-cover w-28 sm:w-32 lg:w-auto md:w-44 `}
+          className={`absolute right-[0] top-[250%] object-cover w-28 sm:w-32 lg:w-auto md:w-44 `}
         />
       </article>
     </>

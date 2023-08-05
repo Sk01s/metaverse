@@ -8,7 +8,16 @@
   box-sizing: border-box;
   font-family: "Eudoxus Sans", sans-serif;
   scroll-behavior: smooth;
+  color: white;
 }
-body {
-  height: 200vh;
+.gradient-1 {
+  background: linear-gradient(
+    180deg,
+    #2565e1,
+    #2565e1 30%,
+    #d225e1 30%,
+    #cfecfd 50%,
+    #7aebfb 50%
+  );
+  background-color: #ffffff00;
 }
