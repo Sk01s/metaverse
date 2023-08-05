@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import React, { FC, useState, useEffect } from "react";
 import IconFram from "./IconFram";
+import Image from "next/image";
 
 type props = {
   index: number;
@@ -12,16 +13,11 @@ const WorldArticle: FC<props> = ({ index, state, title }) => {
   const [isOpen, setIsOpen] = useState(state);
   const [isSmall, setIsSmall] = useState<boolean>(false);
   useEffect(() => {
-    function Size() {
-      if (window.innerWidth < 768) {
-        setIsSmall(true);
-      } else {
-        setIsSmall(false);
-      }
+    if (window.innerWidth < 768) {
+      setIsSmall(true);
+    } else {
+      setIsSmall(false);
     }
-    window.onreset = Size;
-
-    Size();
   }, []);
   return (
     <motion.div
@@ -48,19 +44,22 @@ const WorldArticle: FC<props> = ({ index, state, title }) => {
           : "lg:basis-1/6 md:basis-1/6 basis-[90px]"
       } transition-all duration-300 cursor-pointer`}
     >
-      <motion.img
+      <Image
         src={`/world-${index + 1}.webp`}
         alt="explore the metaverse"
         className="h-full w-full object-cover"
+        layout="fill"
         loading="lazy"
       />
       {isOpen && (
         <motion.div
           initial={{
-            opacity: 0,
+            opacity: 0.5,
+            y: "100%",
           }}
           animate={{
             opacity: 1,
+            y: 0,
           }}
           transition={{ delay: 0.2 }}
           className="absolute lg:bottom-[15%] bottom-[20%] left-[10%]  text-white flex flex-col gap-2 mb-[5%]"
@@ -90,18 +89,22 @@ const WorldArticle: FC<props> = ({ index, state, title }) => {
       <motion.p
         variants={{
           verticle: {
-            x: "-50%",
+            left: "-10%",
             rotate: -90,
           },
           horizontal: {
             rotate: 0,
-            x: "-90%",
+            left: "10%",
             y: "5rem",
           },
         }}
         initial="verticle"
         animate={isSmall ? "horizontal" : isOpen ? "horizontal" : "verticle"}
-        className="absolute  lg-left-[50%] md:left-[50%] sm:left-[30$] left-[45%] bottom-28 text-white text-2xl whitespace-nowrap select-none "
+        className={`absolute   ${
+          isOpen
+            ? "lg-left-[50%] md:left-[50%] sm:left-[30$] left-[45%]"
+            : "left-[60%]"
+        }  bottom-28 text-white text-2xl whitespace-nowrap select-none  transition-[left] du`}
       >
         {title}
       </motion.p>

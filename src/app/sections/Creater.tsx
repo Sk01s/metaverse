@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { slideIn } from "../utils/motions";
+import Image from "next/image";
 const Creater = () => {
   return (
     <section className="px-10 flex gap-8 lg:flex-row flex-col">
@@ -24,15 +25,21 @@ const Creater = () => {
           alt="scroll up"
         />
       </motion.div>
-      <motion.img
-        src="/creater.webp"
-        alt=""
-        className="lg:w-[60%]  object-cover rounded-3xl "
+      <motion.div
         variants={slideIn("right", "spring", 0, 1)}
         initial="hidden"
         whileInView="show"
-        loading="lazy"
-      />
+        className="aspect-video"
+      >
+        <Image
+          src="/creater.webp"
+          alt="rocket image"
+          className=" object-cover rounded-3xl w-full h-full"
+          width={3644}
+          height={2000}
+          loading="lazy"
+        />
+      </motion.div>
     </section>
   );
 };

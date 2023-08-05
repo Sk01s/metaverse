@@ -3,6 +3,7 @@ import Title from "../components/Title";
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motions";
+import Image from "next/image";
 
 const Map = () => {
   return (
@@ -16,14 +17,19 @@ const Map = () => {
         Track friends around you and invite them to play together in the same
         world
       </div>
-      <motion.img
-        src="/map.webp"
-        alt="world map "
+      <motion.div
         variants={fadeIn("up", "spring", 0, 0.2)}
         initial="hidden"
         whileInView={"show"}
-        className="w-full"
-      />
+      >
+        <Image
+          src="/map.webp"
+          alt="world map "
+          className="w-full"
+          width={1170}
+          height={587}
+        />
+      </motion.div>
       <div className=" absolute  h-[50%] w-[20%] z-[-1] top-[60%] left-[30%] rounded-[30%] lg:rotate-[70deg] rotate-[65deg]  bg-[#4298E83B] lg:blur-[5rem] blur-[1rem]" />
       <svg
         className="absolute left-0 top-[50%] z-[-1] w-80 blur-lg"

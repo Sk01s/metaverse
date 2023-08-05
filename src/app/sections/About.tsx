@@ -3,6 +3,7 @@ import Title from "../components/Title";
 import { fadeIn, slideIn } from "../utils/motions";
 import { motion } from "framer-motion";
 import React from "react";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -16,12 +17,16 @@ const About = () => {
           variants={slideIn("left", "spring", 0, 0.8)}
           initial="hidden"
           whileInView={"show"}
-          className="flex lg:flex-row flex-col lg:gap-[8%]  gap-4 px-20 "
+          className="flex lg:flex-row flex-col lg:gap-[8%]  gap-4 lg:px-20 px-4 "
         >
-          <img
+          <Image
             src="/about-1.webp"
             alt="about planet image"
             className="object-cover lg:aspect-square  lg:max-w-[20%] ] lg:rounded-[15%] rounded-[2rem]  "
+            width={3000}
+            height={2000}
+            layout="responsive"
+            loading="lazy"
           />
 
           <div className=" flex gap-[10%]">
@@ -44,12 +49,17 @@ const About = () => {
           variants={slideIn("left", "spring", 0, 0.8)}
           initial="hidden"
           whileInView={"show"}
-          className="flex lg:flex-row flex-col lg:gap-[8%]  gap-4 px-20 "
+          className="flex lg:flex-row flex-col lg:gap-[8%]  gap-4 lg:px-20 px-4 "
         >
-          <img
+          <Image
             src="/about-2.webp"
             alt="about planet image"
             className="object-cover lg:aspect-square  lg:max-w-[20%] ] lg:rounded-[15%] rounded-[2rem]  "
+            layout="responsive"
+            width={4096}
+            height={1639}
+            loading="lazy"
+            style={{ position: "relative" }}
           />
 
           <div className=" flex gap-[10%]">
@@ -73,12 +83,16 @@ const About = () => {
           variants={slideIn("left", "spring", 0, 0.8)}
           initial="hidden"
           whileInView={"show"}
-          className="flex lg:flex-row flex-col lg:gap-[8%]  gap-4 px-20 "
+          className="flex lg:flex-row flex-col lg:gap-[8%]  gap-4 lg:px-20 px-4 "
         >
-          <img
+          <Image
             src="/about-3.webp"
             alt="about planet image"
             className="object-cover lg:aspect-square  lg:max-w-[20%] ] lg:rounded-[15%] rounded-[2rem]  "
+            width={4096}
+            height={2048}
+            layout="responsive"
+            loading="lazy"
           />
 
           <div className=" flex gap-[10%]">
