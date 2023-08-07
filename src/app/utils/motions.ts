@@ -1,22 +1,12 @@
 import { Variants } from "framer-motion";
 export const navVariants: Variants = {
   hidden: {
-    opacity: 0,
     y: -50,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 140,
-    },
+    scale: 0.9,
   },
   show: {
-    opacity: 1,
     y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      delay: 0.3,
-    },
+    scale: 1,
   },
 };
 

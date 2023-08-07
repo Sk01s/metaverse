@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en" className="overflow-y-scroll overflow-x-hidden">
       <head>
         <link rel="preconnect" href="https://stijndv.com" />
         <link
@@ -21,7 +21,7 @@ export default function RootLayout({
           href="https://stijndv.com/fonts/Eudoxus-Sans.css"
         />
       </head>
-      <body className="bg-primary-black overflow-x-hidden">
+      <body className="bg-primary-black  overflow-hidden">
         <Nav />
         {children}
       </body>

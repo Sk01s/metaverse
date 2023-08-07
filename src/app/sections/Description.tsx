@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Title from "../components/Title";
 const Description = () => {
   return (
-    <section className="relative mb-[10rem]" id="description">
+    <section className="relative mb-[10rem] " id="description">
       <Title className="mx-auto" isAnimated={true} text="About Metaverus" />
       <motion.p
         variants={textVariant(0.2)}

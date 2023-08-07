@@ -18,7 +18,7 @@ const Landing = () => {
   return (
     <>
       <Aside />
-      <article ref={hero} className={`mt-24 relative`}>
+      <section ref={hero} className={`mt-24 relative`}>
         <motion.h1
           variants={textVariant(0.5)}
           initial="hidden"
@@ -96,7 +96,7 @@ const Landing = () => {
           alt="Explore and enter the metaverse"
           className={`absolute right-[0] top-[250%] object-cover w-28 sm:w-32 lg:w-auto md:w-44 `}
         />
-      </article>
+      </section>
     </>
   );
 };

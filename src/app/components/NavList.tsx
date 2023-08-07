@@ -3,7 +3,6 @@ import React, { FC, useRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { slideIn } from "../utils/motions";
 type Props = {
   closeNav: () => void;
   isOpen: boolean;
@@ -11,7 +10,21 @@ type Props = {
 const NavList = ({ isOpen, closeNav }: Props) => {
   return (
     <motion.nav
-      variants={slideIn("right", "sprin", 0, 0.4)}
+      variants={{
+        hidden: {
+          x: "100%",
+          scaleX: 0,
+        },
+        show: {
+          x: 0,
+          scaleX: 1,
+          transition: {
+            delay: 0,
+            duration: 1,
+            ease: "easeOut",
+          },
+        },
+      }}
       initial="hidden"
       animate={isOpen ? "show" : "hidden"}
       className="absolute max-w-[20rem] w-[60%] h-full bg-gradient-to-bl from-[#000] to-[#05011ecb] right-0 top-0 z-50 flex justify-center items-center p-12 rounded-tl-3xl rounded-bl-3xl"
